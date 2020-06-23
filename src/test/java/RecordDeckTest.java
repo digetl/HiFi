@@ -18,8 +18,25 @@ public class RecordDeckTest {
     }
 
     @Test
-    public void hasModel(){
-        assertEquals("Samsung", recordDeck.getMake());
+    public void hasModel() {
+        assertEquals("XFA432164", recordDeck.getModel());
     }
 
+    @Test
+    public void canPlay() {
+        recordDeck.play();
+        assertEquals("Playing", recordDeck.play());
+    }
+
+    @Test
+    public void canPause() {
+        recordDeck.pause();
+        assertEquals("Paused", recordDeck.pause());
+    }
+
+    @Test
+    public void canStop() {
+        recordDeck.stop();
+        assertEquals("Stopped", recordDeck.stop());
+    }
 }

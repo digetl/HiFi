@@ -1,4 +1,4 @@
-public class RecordDeck extends Stereo {
+public class RecordDeck extends Stereo implements IPlay, IPause, IStop {
     private String make;
     private String model;
 
@@ -6,6 +6,16 @@ public class RecordDeck extends Stereo {
         super(make, model);
     }
 
+    public String play() {
+        return "Playing";
+    }
 
+    public String pause() {
+        return "Paused";
+    }
+
+    public String stop() {
+        return "Stopped";
+    }
 
 }
